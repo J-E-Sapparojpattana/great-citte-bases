@@ -1,5 +1,7 @@
 # great-citte-bases# 
+
 🌙 Mindful Vibe-Checking (Chittanupassana)
+
 ### *จิตตานุปัสสนาสติปัฏฐาน ฉบับวัยรุ่นสำรวม*
 
 A digital sanctuary designed to help you observe your current "mood" or "vibe" with clarity and simplicity. This project implements a dual-language toggle (Thai/English) wrapped in a **Dark Night & Deep Gold** aesthetic, reflecting a state of calm, artisan mindfulness.
