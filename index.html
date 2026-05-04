@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Vibe Check | จิตตานุปัสสนา</title>
+    <!-- Google Fonts: ใช้ฟอนต์ที่ดูทันสมัยและสะอาดตา -->
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;500&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0b0d; /* Dark Night */
+            --gold-primary: #b08d57; /* Deep Gold */
+            --gold-secondary: #8e6f3e;
+            --text-dim: #a0a0a0;
+            --card-bg: #16181b;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--gold-primary);
+            font-family: 'Inter', 'Anuphan', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            width: 100%;
+            max-width: 800px;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1f2226;
+        }
+
+        .toggle-container {
+            margin-bottom: 20px;
+        }
+
+        button.toggle-btn {
+            background: transparent;
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            padding: 8px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        button.toggle-btn:hover {
+            background: var(--gold-primary);
+            color: var(--bg-color);
+        }
+
+        .content-section {
+            max-width: 700px;
+            width: 90%;
+            margin: 40px 0;
+        }
+
+        h1 {
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .vibe-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .vibe-item {
+            background: var(--card-bg);
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border-left: 3px solid var(--gold-secondary);
+            transition: transform 0.2s;
+        }
+
+        .vibe-item:hover {
+            transform: translateX(5px);
+            background: #1c1f24;
+        }
+
+        .vibe-item b {
+            color: #d4af37;
+        }
+
+        .summary-box {
+            margin-top: 50px;
+            padding: 30px;
+            border: 1px solid #1f2226;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #0d0e11, #16181b);
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #444;
+            text-align: center;
+        }
+
+        /* Language Switching */
+        [lang="en"] { display: none; }
+        .lang-en [lang="th"] { display: none; }
+        .lang-en [lang="en"] { display: block; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleLang()">TH / EN</button>
+    </div>
+    <h1 lang="th">วิธีสังเกตใจตัวเอง</h1>
+    <h1 lang="en">How to Mindfully Check Your Vibe</h1>
+    <p class="description" lang="th">จิตตานุปัสสนาสติปัฏฐาน — แค่รู้ว่าตอนนี้ใจเราเป็นยังไง[cite: 2]</p>
+    <p class="description" lang="en">Chittanupassana Satipatthana — Knowing your current vibe without judging it.[cite: 1]</p>
+</header>
+
+<div class="content-section">
+    <ul class="vibe-list" id="vibeList">
+        <!-- รายการจะถูกสลับภาษาผ่าน Class ของ Body -->
+    </ul>
+
+    <div class="summary-box">
+        <h3 lang="th">สรุปสั้นๆ สำหรับการฝึกใจ</h3>
+        <h3 lang="en">Summary for Practice</h3>
+        <ul lang="th">
+            <li>ดูใจของ <b>ตัวเอง</b> บ้าง[cite: 2]</li>
+            <li>สังเกตและเรียนรู้จากใจของ <b>คนรอบข้าง</b> เพื่อสร้างความเข้าใจ[cite: 2]</li>
+            <li>เฝ้าดูตอนที่อารมณ์ <b>เริ่มเกิดขึ้น</b> และ <b>จางหายไป</b>[cite: 2]</li>
+        </ul>
+        <ul lang="en">
+            <li>Watch <b>your own</b> mind and feelings.[cite: 1]</li>
+            <li>Observe and learn from the vibes of <b>others</b> to cultivate empathy.[cite: 1]</li>
+            <li>Watch how these feelings <b>arise</b> and how they <b>fade away</b>.[cite: 1]</li>
+        </ul>
+        <p style="text-align: center; margin-top: 30px; font-style: italic;">
+            <span lang="th">"ใจมันก็แค่นี้แหละ" — สู่ความสงบที่เรียบง่ายที่สุด[cite: 2]</span>
+            <span lang="en">"The mind is just there." — The path to clarity and inner peace.[cite: 1]</span>
+        </p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Mindfulness Exploration &copy; 2026</p>
+</footer>
+
+<script>
+    const data = [
+        { th: "<b>ตอนที่ใจอยากได้:</b> ก็แค่รู้ตัวชัดๆ ว่ากำลังมีความอยาก[cite: 2]", en: "<b>When there’s a craving:</b> Simply acknowledge it.[cite: 1]" },
+        { th: "<b>ตอนที่ใจเฉยๆ:</b> รู้ตัวว่าตอนนี้ใจปกติ ไม่ได้โหยหา[cite: 2]", en: "<b>When the mind is content:</b> Know that the mind is chill.[cite: 1]" },
+        { th: "<b>ตอนที่ใจตึงหรือหงุดหงิด:</b> รู้ตัวว่าตอนนี้ใจเริ่มขุ่นมัว[cite: 2]", en: "<b>When there’s irritation:</b> Notice it, the mind is tensed.[cite: 1]" },
+        { th: "<b>ตอนที่ใจเย็นลง:</b> รู้ตัวว่าใจเราสงบดีจัง[cite: 2]", en: "<b>When the mind is cool-headed:</b> The mind is calm.[cite: 1]" },
+        { th: "<b>ตอนที่ใจเบลอหรือหลง:</b> รู้ตัวว่ากำลังหลงทาง[cite: 2]", en: "<b>When the mind is confused:</b> Realize it feels blurry.[cite: 1]" },
+        { th: "<b>ตอนที่ใจเคลียร์:</b> รู้ตัวว่าตอนนี้ตื่นรู้และชัดเจน[cite: 2]", en: "<b>When the mind is clear:</b> Know you’re seeing clearly.[cite: 1]" },
+        { th: "<b>ตอนที่ใจดาวน์ (Down):</b> รู้ตัวว่าใจนิ่งๆ ซึมๆ ไปหน่อย[cite: 2]", en: "<b>When the mind feels down:</b> The mind is feeling heavy.[cite: 1]" },
+        { th: "<b>ตอนที่ใจฟุ้งซ่าน:</b> รู้ตัวว่าใจกำลังส่ายไปมา[cite: 2]", en: "<b>When the mind is restless:</b> Your thoughts are racing.[cite: 1]" },
+        { th: "<b>ตอนที่ใจเข้าโหมดโฟกัส:</b> รู้ตัวว่าใจอัปเกรดสู่ความสงบลึก[cite: 2]", en: "<b>Focus Mode:</b> The mind is in an elevated state.[cite: 1]" },
+        { th: "<b>โหมดธรรมดาทั่วไป:</b> รู้ตัวว่านี่คือมู้ดปกติของคนทั่วไป[cite: 2]", en: "<b>Everyday Mode:</b> Just a normal, everyday vibe.[cite: 1]" },
+        { th: "<b>ตอนที่ใจพัฒนาต่อได้:</b> รู้ตัวว่ายังมีทางให้ไปต่อได้อีก[cite: 2]", en: "<b>Room to grow:</b> Great state, but can still improve.[cite: 1]" },
+        { th: "<b>ตอนที่ใจพีคที่สุด:</b> รู้ตัวว่าตอนนี้ใจโอเคที่สุดแล้ว[cite: 2]", en: "<b>At its peak:</b> Reached its highest potential.[cite: 1]" },
+        { th: "<b>ตอนที่ใจนิ่งสนิท:</b> รู้ตัวว่าใจตั้งมั่นและมีสมาธิมาก[cite: 2]", en: "<b>Concentrated:</b> The mind is firmly anchored.[cite: 1]" },
+        { th: "<b>ตอนที่ใจยังไม่นิ่ง:</b> รู้ตัวว่าใจยังไม่ค่อยเป็นสมาธิ[cite: 2]", en: "<b>Unsteady:</b> The mind isn't quite settled yet.[cite: 1]" },
+        { th: "<b>ตอนที่ใจโล่งอิสระ:</b> รู้ตัวว่าใจเบาสบายและเป็นอิสระ[cite: 2]", en: "<b>Liberated:</b> Feel truly free and unburdened.[cite: 1]" },
+        { th: "<b>ตอนที่ใจยังมีอะไรค้าง:</b> รู้ตัวว่ายังมีสิ่งกวนใจอยู่[cite: 2]", en: "<b>Stuck or tied down:</b> Something is weighing on the mind.[cite: 1]" }
+    ];
+
+    const vibeList = document.getElementById('vibeList');
+    
+    data.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'vibe-item';
+        li.innerHTML = `
+            <span lang="th">${item.th}</span>
+            <span lang="en">${item.en}</span>
+        `;
+        vibeList.appendChild(li);
+    });
+
+    function toggleLang() {
+        document.body.classList.toggle('lang-en');
+    }
+</script>
+
+</body>
+</html>
