@@ -1,6 +1,6 @@
-# great-citte-bases# 
+# great-citte-bases 
 
-🌙 Mindful Vibe-Checking (Chittanupassana)
+# 🌙 Mindful Vibe-Checking (Chittanupassana)
 
 ### *จิตตานุปัสสนาสติปัฏฐาน ฉบับวัยรุ่นสำรวม*
 
